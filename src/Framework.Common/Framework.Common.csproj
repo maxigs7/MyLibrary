@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{492B8264-0C10-4AFE-A15F-8A82E60ADE68}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.Common</RootNamespace>
+    <AssemblyName>Framework.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'tekove|AnyCPU'">
+    <OutputPath>bin\tekove\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'test|AnyCPU'">
+    <OutputPath>bin\test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\OrderAttribute.cs" />
+    <Compile Include="Common\AppSettingsBase.cs" />
+    <Compile Include="Common\IServiceValidator.cs" />
+    <Compile Include="Entities\Enum\SortDirectionEnum.cs" />
+    <Compile Include="Entities\Interfaces\ICurrentUser.cs" />
+    <Compile Include="Extensions\AttributeExtensions.cs" />
+    <Compile Include="Extensions\AutoMapExtensions.cs" />
+    <Compile Include="Extensions\QueryableExtensions.cs" />
+    <Compile Include="Helpers\SecurityHelper.cs" />
+    <Compile Include="Helpers\RandomHelper.cs" />
+    <Compile Include="Services\Dtos\ComboboxItemDto.cs" />
+    <Compile Include="Services\Dtos\EntityDto.cs" />
+    <Compile Include="Services\Dtos\ListResultDto.cs" />
+    <Compile Include="Services\Dtos\PagedAndSortedResultRequestDto.cs" />
+    <Compile Include="Services\Dtos\PagedResultDto.cs" />
+    <Compile Include="Services\Dtos\PagedResultRequestDto.cs" />
+    <Compile Include="Common\IAppSettingsBase.cs" />
+    <Compile Include="Services\Interfaces\IEntityDto.cs" />
+    <Compile Include="Entities\Auditing\AuditedEntity.cs" />
+    <Compile Include="Entities\Auditing\CreationAuditedEntity.cs" />
+    <Compile Include="Entities\Auditing\FullAuditedEntity.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Extensions\Entity.cs" />
+    <Compile Include="Entities\Helpers\EntityAuditingHelper.cs" />
+    <Compile Include="Entities\Interfaces\IAudited.cs" />
+    <Compile Include="Entities\Interfaces\ICreationAudited.cs" />
+    <Compile Include="Entities\Interfaces\IDeletionAudited.cs" />
+    <Compile Include="Entities\Interfaces\IEntity.cs" />
+    <Compile Include="Entities\Interfaces\IEntityPrimaryKey.cs" />
+    <Compile Include="Entities\Interfaces\IFullAudited.cs" />
+    <Compile Include="Entities\Interfaces\IHasCreationTime.cs" />
+    <Compile Include="Entities\Interfaces\IHasDeletionTime.cs" />
+    <Compile Include="Entities\Interfaces\IHasModificationTime.cs" />
+    <Compile Include="Entities\Interfaces\IModificationAudited.cs" />
+    <Compile Include="Entities\Interfaces\ISoftDelete.cs" />
+    <Compile Include="Entities\Pagination\PagedMetadata.cs" />
+    <Compile Include="Entities\Pagination\PagedResultList.cs" />
+    <Compile Include="Entities\Pagination\PagingCriteria.cs" />
+    <Compile Include="Entities\Helpers\SortHelper.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DayOfWeekExtensions.cs" />
+    <Compile Include="Extensions\DecimalExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\LockExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\RectangleExtensions.cs" />
+    <Compile Include="Services\Interfaces\IHasTotalCount.cs" />
+    <Compile Include="Services\Interfaces\ILimitedResultRequest.cs" />
+    <Compile Include="Services\Interfaces\IListResult.cs" />
+    <Compile Include="Services\Interfaces\IPagedAndSortedResultRequest.cs" />
+    <Compile Include="Services\Interfaces\IPagedResult.cs" />
+    <Compile Include="Services\Interfaces\IPagedResultRequest.cs" />
+    <Compile Include="Services\Interfaces\ISortedResultRequest.cs" />
+    <Compile Include="UniqueIdentifier\IGuidGenerator.cs" />
+    <Compile Include="UniqueIdentifier\RegularGuidGenerator.cs" />
+    <Compile Include="UniqueIdentifier\SequentialGuidGenerator.cs" />
+    <Compile Include="Helpers\DateHelper.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\ExceptionHelper.cs" />
+    <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="Mapping\IHaveCustomMappings.cs" />
+    <Compile Include="Mapping\IMapFrom.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\IRunAfterLogin.cs" />
+    <Compile Include="Timing\Clock.cs" />
+    <Compile Include="Timing\ClockProviders.cs" />
+    <Compile Include="Timing\IClockProvider.cs" />
+    <Compile Include="Timing\UnspecifiedClockProvider.cs" />
+    <Compile Include="Result\ServiceResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
