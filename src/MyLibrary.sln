@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Ioc.Ninject", "Fr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Logging.Elmah", "Framework.Logging.Elmah\Framework.Logging.Elmah.csproj", "{6E2A6FC0-BAFA-4FD8-A838-AB420F40F50D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Report", "Framework.Report\Framework.Report.csproj", "{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,14 @@ Global
 		{6E2A6FC0-BAFA-4FD8-A838-AB420F40F50D}.tekove|Any CPU.Build.0 = Release|Any CPU
 		{6E2A6FC0-BAFA-4FD8-A838-AB420F40F50D}.test|Any CPU.ActiveCfg = Release|Any CPU
 		{6E2A6FC0-BAFA-4FD8-A838-AB420F40F50D}.test|Any CPU.Build.0 = Release|Any CPU
+		{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}.tekove|Any CPU.ActiveCfg = test|Any CPU
+		{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}.tekove|Any CPU.Build.0 = test|Any CPU
+		{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}.test|Any CPU.ActiveCfg = test|Any CPU
+		{FD277BF3-9DD0-47A8-A40B-F2645201ECA0}.test|Any CPU.Build.0 = test|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
